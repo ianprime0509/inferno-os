@@ -16,10 +16,12 @@ CFLAGS=		-g\
 		-O\
 		-fno-strict-aliasing\
 		-fno-aggressive-loop-optimizations\
+        -fcommon\
 		-Wuninitialized -Wunused-variable -Wreturn-type -Wimplicit\
 		-I$ROOT/Linux/386/include\
 		-I$ROOT/include\
-		-DLINUX_386
+		-DLINUX_386\
+        -D_GNU_SOURCE
 
 ANSICPP=
 LD=		cc -m32

@@ -22,6 +22,10 @@
 #include	<sys/syscall.h>
 #define	getpid()	syscall(SYS_getpid)
 
+/* For dynamic linking init/fini code that needs malloc */
+void (*coherence)(void) = nofence;
+
+
 enum
 {
 	DELETE	= 0x7f,
